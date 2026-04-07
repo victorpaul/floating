@@ -23,7 +23,8 @@ type GameScreen struct {
 
 func NewGameScreen() *GameScreen {
 
-	player, world := worlds.NewWorldSandBox()
+	player, world := worlds.NewWorldPool()
+	//player, world := worlds.NewWorldSandBox()
 	controller := core.NewController(player, ScreenWidth)
 
 	return &GameScreen{
